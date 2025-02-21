@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Image Captioning</title>
+</head>
+<body>
+    <h2>Upload an Image to Generate Caption</h2>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Upload">
+    </form>
+    
+    {% if uploaded_image %}
+        <h3>Uploaded Image:</h3>
+        <img src="{{ uploaded_image }}" width="300px">
+        <h3>Generated Caption:</h3>
+        <p>{{ caption }}</p>
+    {% endif %}
+</body>
+</html>
